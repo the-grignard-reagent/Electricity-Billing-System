@@ -1,0 +1,119 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Paytm",
+            "request": "launch",
+            "mainClass": "Paytm",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "PayBill",
+            "request": "launch",
+            "mainClass": "PayBill",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "BillDetails",
+            "request": "launch",
+            "mainClass": "BillDetails",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "UpdateInformation",
+            "request": "launch",
+            "mainClass": "UpdateInformation",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "ViewInformation",
+            "request": "launch",
+            "mainClass": "ViewInformation",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "CustomerDetails",
+            "request": "launch",
+            "mainClass": "CustomerDetails",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "DepositDetails",
+            "request": "launch",
+            "mainClass": "DepositDetails",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "CalculateBill",
+            "request": "launch",
+            "mainClass": "CalculateBill",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "MeterInfo",
+            "request": "launch",
+            "mainClass": "MeterInfo",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "NewCustomer",
+            "request": "launch",
+            "mainClass": "NewCustomer",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "Project",
+            "request": "launch",
+            "mainClass": "Project",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "Signup",
+            "request": "launch",
+            "mainClass": "Signup",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "Login",
+            "request": "launch",
+            "mainClass": "Login",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "ElectricBillSystem_c04016ea"
+        },
+        {
+            "type": "java",
+            "name": "Splash",
+            "request": "launch",
+            "mainClass": "Splash",
+            "projectName": "ElectricBillSystem_c04016ea"
+        }
+    ]
+}

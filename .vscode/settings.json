@@ -1,0 +1,9 @@
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/suraj/Downloads/mysql-connector-java-8.0.28.jar",
+        "/home/suraj/Downloads/rs2xml.jar"
+    ]
+    
+}
