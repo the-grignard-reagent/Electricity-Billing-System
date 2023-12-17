@@ -6,7 +6,7 @@ import java.sql.*;
 
 // Signup class extending JFrame and implementing ActionListener
 public class Signup extends JFrame implements ActionListener {
-
+ 
     // Declaration of buttons, Choice, and text fields
     JButton create, back;
     Choice accountType;
