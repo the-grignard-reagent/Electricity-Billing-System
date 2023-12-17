@@ -4,7 +4,7 @@ import java.awt.*;
 // Splash class extending JFrame and implementing Runnable
 public class Splash extends JFrame implements Runnable {
     // Thread for controlling animation and splash screen duration
-    Thread t;
+    Thread t; 
 
     // Constructor for Splash class
     Splash() {
