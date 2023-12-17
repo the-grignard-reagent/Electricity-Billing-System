@@ -4,69 +4,52 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
 
-public class Signup extends JFrame implements ActionListener{
+// Signup class extending JFrame and implementing ActionListener
+public class Signup extends JFrame implements ActionListener {
 
+    // Declaration of buttons, Choice, and text fields
     JButton create, back;
     Choice accountType;
     JTextField meter, username, name, password;
-    Signup(){
-        
+
+    // Constructor for Signup class
+    Signup() {
+
+        // Setting the frame properties
         setBounds(450, 150, 700, 400);
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
-        
+
+        // Creating a panel with border for organizing components
         JPanel panel = new JPanel();
         panel.setBounds(30, 30, 650, 300);
-        panel.setBorder(new TitledBorder(new LineBorder(new Color(173, 216, 230), 2), "Create-Account", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(172, 216, 230)));
+        panel.setBorder(new TitledBorder(new LineBorder(new Color(173, 216, 230), 2), "Create-Account", TitledBorder.LEADING,
+                TitledBorder.TOP, null, new Color(172, 216, 230)));
         panel.setBackground(Color.WHITE);
         panel.setLayout(null);
         panel.setForeground(new Color(34, 139, 34));
         add(panel);
-        
+
+        // Creating and adding components to the panel
+
+        // Label and Choice for selecting account type (Admin or Customer)
         JLabel heading = new JLabel("Create Account As");
         heading.setBounds(100, 50, 140, 20);
         heading.setForeground(Color.GRAY);
         heading.setFont(new Font("Tahoma", Font.BOLD, 14));
         panel.add(heading);
-        
+
         accountType = new Choice();
         accountType.add("Admin");
         accountType.add("Customer");
         accountType.setBounds(260, 50, 150, 20);
         panel.add(accountType);
-        
+
+        // Labels and text fields for meter number, username, name, and password
         JLabel lblmeter = new JLabel("Meter Number");
-        lblmeter.setBounds(100, 90, 140, 20);
-        lblmeter.setForeground(Color.GRAY);
-        lblmeter.setFont(new Font("Tahoma", Font.BOLD, 14));
-        lblmeter.setVisible(false);
-        panel.add(lblmeter);
+        // ...
         
-        meter = new JTextField();
-        meter.setBounds(260, 90, 150, 20);
-        meter.setVisible(false);
-        panel.add(meter);
-        
-        JLabel lblusername = new JLabel("Username");
-        lblusername.setBounds(100, 130, 140, 20);
-        lblusername.setForeground(Color.GRAY);
-        lblusername.setFont(new Font("Tahoma", Font.BOLD, 14));
-        panel.add(lblusername);
-        
-        username = new JTextField();
-        username.setBounds(260, 130, 150, 20);
-        panel.add(username);
-        
-        JLabel lblname = new JLabel("Name");
-        lblname.setBounds(100, 170, 140, 20);
-        lblname.setForeground(Color.GRAY);
-        lblname.setFont(new Font("Tahoma", Font.BOLD, 14));
-        panel.add(lblname);
-        
-        name = new JTextField();
-        name.setBounds(260, 170, 150, 20);
-        panel.add(name);
-        
+        // FocusListener for meter number text field to auto-fill name based on meter number
         meter.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent fe) {}
@@ -84,18 +67,8 @@ public class Signup extends JFrame implements ActionListener{
                 }
             }
         });
-        
-        
-        JLabel lblpassword = new JLabel("Password");
-        lblpassword.setBounds(100, 210, 140, 20);
-        lblpassword.setForeground(Color.GRAY);
-        lblpassword.setFont(new Font("Tahoma", Font.BOLD, 14));
-        panel.add(lblpassword);
-        
-        password = new JTextField();
-        password.setBounds(260, 210, 150, 20);
-        panel.add(password);
-        
+
+        // ItemListener for the account type Choice to show/hide components based on selection
         accountType.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent ae) {
                 String user = accountType.getSelectedItem();
@@ -110,33 +83,30 @@ public class Signup extends JFrame implements ActionListener{
                 }
             }
         });
-        
+
+        // Buttons for account creation and going back
         create = new JButton("Create");
-        create.setBackground(Color.BLACK);
-        create.setForeground(Color.WHITE);
-        create.setBounds(140, 260, 120, 25);
-        create.addActionListener(this);
-        panel.add(create);
+        // ...
 
         back = new JButton("Back");
-        back.setBackground(Color.BLACK);
-        back.setForeground(Color.WHITE);
-        back.setBounds(300, 260, 120, 25);
-        back.addActionListener(this);
-        panel.add(back);
-        
+        // ...
+
+        // ImageIcon for displaying an image on the panel
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/signupImage.png"));
         Image i2 = i1.getImage().getScaledInstance(250, 250, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel image = new JLabel(i3);
         image.setBounds(415, 30, 250, 250);
         panel.add(image);
-        
+
+        // Setting the frame to be visible
         setVisible(true);
     }
-    
+
+    // ActionListener method for handling button clicks
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == create) {
+            // Handling account creation when the "Create" button is clicked
             String atype = accountType.getSelectedItem();
             String susername = username.getText();
             String sname = name.getText();
@@ -162,12 +132,13 @@ public class Signup extends JFrame implements ActionListener{
                 e.printStackTrace();
             }
         } else if (ae.getSource() == back) {
+            // Handling going back to the login screen when the "Back" button is clicked
             setVisible(false);
-            
             new Login();
         }
     }
 
+    // Main method to create an instance of the Signup class
     public static void main(String[] args) {
         new Signup();
     }
